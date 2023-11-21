@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Time App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    
+    <header>
+      <h1 title="Quran 4:103">إِنَّ الصَّلاَةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَاباً مَّوْقُوتاً</h1>
+      <p title="Quran 4:103">بے شک نماز مومنوں پر ایک فرض ہے جو وقت کے ساتھ بندھا ہوا ہے۔</p>
+    </header>
+    
+    <div class="location-edit" id="location-edit">
+      <a href="#" class="close" id="close" title="Close"></a>
+      <form>
+        <label for="city">City</label><br>
+        <input type="text" name="city" id="city" value="Bangalore" onfocusout="validate(this)" required><br>
+        <label for="country">Country</label><br>
+        <input type="text" name="country" id="country" value = "India" onfocusout="validate(this)" required><br>
+    <!--     <p class="form-error" id="form-error">Please fill all the required fields</p> -->
+        <button type="button" id="location-info">Submit</button>
+      </form>
+    </div>
+    
+    <p class="error" id="error"></p>
+    
+    <div class="container">
+      <div class="info">
+        <div id="hijri"></div>
+        <div><span id="location"></span><div class="tooltip"><i id="edit" class="fas fa-pen"></i>
+      <span class="tooltiptext">Change Location Manually</span>
+    </div>
+      <div class="tooltip"><i id="autoLocation" class="fas fa-redo-alt"></i>
+      <span class="tooltiptext">Auto Refresh Location</span>
+    </div>
+    </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="time" id="fajr-cont">
+        <div>Fajr</div>
+        <div id="fajr"></div>
+      </div>
+      <div class="time" id="sunrise-cont">
+        <div>Sunrise</div>
+        <div id="sunrise"></div>
+      </div>
+      <div class="time" id="dhuhr-cont">
+        <div>Dhuhr</div>
+        <div id="dhuhr"></div>
+      </div>
+      <div class="time" id="asr-cont">
+        <div>Asr</div>
+        <div id="asr"></div>
+      </div>
+      <!--         <div class="time active"><div>Sunset</div><div id="sunset">4:57 AM</div></div> -->
+      <div class="time" id="maghrib-cont">
+        <div>Maghrib</div>
+        <div id="maghrib"></div>
+      </div>
+      <div class="time" id="isha-cont">
+        <div>Isha</div>
+        <div id="isha"></div>
+      </div>
+    </div>
+    <!-- <footer></footer> -->
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
